@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+import Nav from "../components/Nav/Nav";
 import styles from "./Home.module.css";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <main className={styles.homepage}>
+      <Nav />
       <section>
         <h1>
           You travel the world.
@@ -14,6 +17,9 @@ const Home = () => {
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </h2>
+        <Link to="/app" className="cta">
+          Start tracking now
+        </Link>
       </section>
     </main>
   );

@@ -1,12 +1,14 @@
 import { useState } from "react";
+import Nav from "../components/Nav/Nav";
 import styles from "./Login.module.css";
 
-const Login = () => {
-  const [email, setEmail] = useState("jack@example.com");
-  const [password, setPassword] = useState("qwerty");
+const Login: React.FC = () => {
+  const [email, setEmail] = useState<string>("john@example.com");
+  const [password, setPassword] = useState<string>("doe");
 
   return (
     <main className={styles.login}>
+      <Nav />
       <form className={styles.form}>
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
